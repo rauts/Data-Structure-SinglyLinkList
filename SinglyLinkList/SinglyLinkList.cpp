@@ -14,7 +14,8 @@ int main()
     //TestRemoveHeadFunction();
     //TestClearFunction();
     //TestInsertionOperator();
-    TestFindFunction();
+    //TestFindFunction();
+    TestInsertAfterFunction();
     
     return 0;
 }
