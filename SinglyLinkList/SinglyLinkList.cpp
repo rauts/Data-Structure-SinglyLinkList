@@ -9,7 +9,8 @@ using std::cout;
 
 int main()
 {
-    TestEmptyList();
+    //TestEmptyList();
+    TestInsertHeadFunction();
     
     return 0;
 }
