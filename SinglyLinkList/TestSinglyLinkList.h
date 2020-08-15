@@ -4,3 +4,4 @@ void TestInsertHeadFunction();
 void TestRemoveHeadFunction();
 void TestClearFunction();
 void TestInsertionOperator(); // << 
+void TestFindFunction();
