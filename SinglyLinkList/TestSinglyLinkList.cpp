@@ -53,3 +53,24 @@ void TestRemoveHeadFunction() {
 	cout << "RemoveHead() Test PASSED!";
 	cout << "\n-----------------------------\n";
 }
+
+void TestClearFunction() {
+	List<int> l{};
+	l.InsertHead(1);
+	l.InsertHead(2);
+	l.InsertHead(3);
+	assert(!l.IsEmpty());
+	assert(l.CountNode() == 3);
+	cout << "l.InsertHead(1) \n";
+	cout << "l.InsertHead(2) \n";
+	cout << "l.InsertHead(3) \n";
+	cout << "Node count = " << l.CountNode() << '\n';
+
+	l.Clear();
+	cout << "l.Clear() \n";
+	cout << "Node count = " << l.CountNode() << '\n';
+	cout << "\n-----------------------------\n";
+	cout << "Clear() Test PASSED!";
+	cout << "\n-----------------------------\n";
+
+}
