@@ -10,7 +10,8 @@ using std::cout;
 int main()
 {
     //TestEmptyList();
-    TestInsertHeadFunction();
+    //TestInsertHeadFunction();
+    TestRemoveHeadFunction();
     
     return 0;
 }
