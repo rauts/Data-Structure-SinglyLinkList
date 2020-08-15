@@ -13,7 +13,8 @@ int main()
     //TestInsertHeadFunction();
     //TestRemoveHeadFunction();
     //TestClearFunction();
-    TestInsertionOperator();
+    //TestInsertionOperator();
+    TestFindFunction();
     
     return 0;
 }
