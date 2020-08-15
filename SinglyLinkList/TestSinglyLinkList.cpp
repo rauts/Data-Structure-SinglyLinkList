@@ -1,6 +1,8 @@
 
 #include <iostream>
+#include <string>
 using std::cout;
+using std::string;
 
 #include <cassert>
 #include "SinglyLinkList.h"
@@ -95,4 +97,38 @@ void TestInsertionOperator() {
 	cout << "\n-----------------------------\n";
 	cout << "<< Operator Test PASSED!";
 	cout << "\n-----------------------------\n";
+}
+
+
+void TestFindFunction() {
+	List<int> l{};
+	l.InsertHead(5);
+	l.InsertHead(100);
+	l.InsertHead(3);
+	assert(!l.IsEmpty());
+	assert(l.CountNode() == 3);
+
+	cout << "l.InsertHead(5) \n";
+	cout << "l.InsertHead(100) \n";
+	cout << "l.InsertHead(3) \n";
+
+	cout << "l = " << l << '\n';
+
+	auto pos = l.Find(100);
+	assert(pos->mData == 100);
+
+	cout << "auto pos = l.Find(100) \n";
+	cout << "pos->mData = " << pos->mData<<'\n';
+
+	pos = l.Find(1);
+	assert(pos == nullptr);
+	cout << "pos = l.Find(1) \n";
+
+    string flag = (pos == nullptr) ? "true" : "false";
+	cout << "pos == nullptr " << flag << '\n';
+
+	cout << "\n-----------------------------\n";
+	cout << "Find() Test PASSED!";
+	cout << "\n-----------------------------\n";
+
 }
