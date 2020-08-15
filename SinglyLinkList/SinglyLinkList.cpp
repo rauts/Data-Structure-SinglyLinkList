@@ -12,7 +12,8 @@ int main()
     //TestEmptyList();
     //TestInsertHeadFunction();
     //TestRemoveHeadFunction();
-    TestClearFunction();
+    //TestClearFunction();
+    TestInsertionOperator();
     
     return 0;
 }
