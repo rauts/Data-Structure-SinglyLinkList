@@ -33,6 +33,11 @@ public:
 	List() = default;
 	// destructor
 	~List() { Clear(); }	
+
+	// utility functions
+	bool IsEmpty() const { return mNodeCount == 0; }
+	int CountNode() const { return mNodeCount; }
+
 	void Clear() {}
 		
 };
