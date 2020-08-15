@@ -63,6 +63,11 @@ public:
 
 	}
 
-	void Clear() {}
+	// clear all nodes
+	void Clear() {
+		while (mHead != nullptr) {
+			RemoveHead();
+		}
+	}
 		
 };
