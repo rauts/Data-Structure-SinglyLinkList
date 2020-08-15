@@ -43,7 +43,7 @@ public:
 		// create a node with a value
 		Node* node = new Node{ data };
 		// change the head node		
-		node->mNext = mHead; // mHead is nullptr initially
+		node->mNext = mHead; 
 		mHead = node;
 		// increment node count
 		++mNodeCount;
@@ -51,14 +51,15 @@ public:
 
 	// remove head
 	void RemoveHead() {
-		// create a new head node to point to the current head->next node
-		// delete the current head node
-		// assign new head node to head node
-		// decrement the node count 	 
+		
 		assert(!IsEmpty());
+		// create a new head node to point to the current head->next node
 		Node* newHead = mHead->mNext;
+		// delete the current head node
 		delete mHead;
+		// assign new head node to head node
 		mHead = newHead;
+		// decrement the node count 	
 		--mNodeCount;
 
 	}
@@ -106,6 +107,17 @@ public:
 			}
 			return nullptr;
 		}
+	}
+
+	void InsertAfter(Node* node, const T& value) {
+		assert(node != nullptr);
+		// create a new node with a value
+		Node* newNode = new Node{ value };
+		// connect neighbour of the new node to the neighbour of the given node
+		newNode->mNext = node->mNext;
+		// make newNode the neighbour of the given node 
+		node->mNext = newNode;
+		++mNodeCount;
 	}
 		
 };
