@@ -86,5 +86,26 @@ public:
 		}
 		return os;
 	}
+
+	// return a node which matches a searched item
+	Node* Find(T value) {
+
+		if (IsEmpty()) {
+			return nullptr;
+		}
+		else {
+
+			Node* node = mHead;
+			while (node != nullptr) {
+				if (node->mData == value) {
+					return node;
+				}
+				else {
+					node = node->mNext;
+				}
+			}
+			return nullptr;
+		}
+	}
 		
 };
