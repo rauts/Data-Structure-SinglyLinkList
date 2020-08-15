@@ -164,3 +164,35 @@ void TestInsertAfterFunction() {
 	cout << "\n-----------------------------\n";
 
 }
+
+void TestRemoveAfterFunction() {
+	List<int> l{};
+	l.InsertHead(5);
+	l.InsertHead(100);
+	l.InsertHead(3);
+	assert(!l.IsEmpty());
+	assert(l.CountNode() == 3);
+
+	cout << "l.InsertHead(5) \n";
+	cout << "l.InsertHead(100) \n";
+	cout << "l.InsertHead(3) \n";
+
+	cout << "l = " << l << '\n';
+
+	auto pos = l.Find(3);
+	assert(pos->mData == 3);
+
+	cout << "auto pos = l.Find(3) \n";
+	
+	l.RemoveAfter(pos);
+	assert(l.CountNode() == 2);
+
+	cout << "l.RemoveAfter(pos) \n";
+	cout << "l = " << l << '\n';
+
+	cout << "\n-----------------------------\n";
+	cout << "RemoveAfter() Test PASSED!";
+	cout << "\n-----------------------------\n";
+
+
+}
