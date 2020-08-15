@@ -132,3 +132,35 @@ void TestFindFunction() {
 	cout << "\n-----------------------------\n";
 
 }
+
+void TestInsertAfterFunction() {
+	List<int> l{};
+	l.InsertHead(5);
+	l.InsertHead(100);
+	l.InsertHead(3);
+	assert(!l.IsEmpty());
+	assert(l.CountNode() == 3);
+
+	cout << "l.InsertHead(5) \n";
+	cout << "l.InsertHead(100) \n";
+	cout << "l.InsertHead(3) \n";
+
+	cout << "l = " << l << '\n';
+
+	auto pos = l.Find(100);
+	assert(pos->mData == 100);
+
+	cout << "auto pos = l.Find(100) \n";
+	cout << "pos->mData = " << pos->mData << '\n';
+
+	l.InsertAfter(pos, 20);
+	assert(l.CountNode() == 4);
+		
+	cout << "l.InsertAfter(pos, 20) \n";
+	cout << "l = " << l << '\n';
+
+	cout << "\n-----------------------------\n";
+	cout << "InsertAfter() Test PASSED!";
+	cout << "\n-----------------------------\n";
+
+}
