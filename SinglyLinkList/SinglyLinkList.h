@@ -49,6 +49,20 @@ public:
 		++mNodeCount;
 	}
 
+	// remove head
+	void RemoveHead() {
+		// create a new head node to point to the current head->next node
+		// delete the current head node
+		// assign new head node to head node
+		// decrement the node count 	 
+		assert(!IsEmpty());
+		Node* newHead = mHead->mNext;
+		delete mHead;
+		mHead = newHead;
+		--mNodeCount;
+
+	}
+
 	void Clear() {}
 		
 };
