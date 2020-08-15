@@ -74,3 +74,25 @@ void TestClearFunction() {
 	cout << "\n-----------------------------\n";
 
 }
+
+void TestInsertionOperator() {
+	List<int> l{};
+	
+	cout << "l = " << l<<'\n';
+
+	l.InsertHead(1);
+	l.InsertHead(2);
+	l.InsertHead(3);
+	assert(!l.IsEmpty());
+	assert(l.CountNode() == 3);
+
+	cout << "l.InsertHead(1) \n";
+	cout << "l.InsertHead(2) \n";
+	cout << "l.InsertHead(3) \n";
+	
+	cout << "l = " << l << '\n';
+
+	cout << "\n-----------------------------\n";
+	cout << "<< Operator Test PASSED!";
+	cout << "\n-----------------------------\n";
+}
