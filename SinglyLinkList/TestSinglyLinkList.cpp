@@ -19,6 +19,7 @@ void TestInsertHeadFunction() {
 	List<int> l{};
 	assert(l.IsEmpty());
 	assert(l.CountNode() == 0);
+	cout << "Node count = " << l.CountNode() << '\n';
 	l.InsertHead(1);
 	assert(!l.IsEmpty());
 	assert(l.CountNode() == 1);
