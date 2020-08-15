@@ -6,3 +6,4 @@ void TestClearFunction();
 void TestInsertionOperator(); // << 
 void TestFindFunction();
 void TestInsertAfterFunction();
+void TestRemoveAfterFunction();
