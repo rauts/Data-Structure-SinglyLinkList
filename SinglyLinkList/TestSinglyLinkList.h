@@ -2,3 +2,4 @@
 void TestEmptyList();
 void TestInsertHeadFunction();
 void TestRemoveHeadFunction();
+void TestClearFunction();
