@@ -69,5 +69,22 @@ public:
 			RemoveHead();
 		}
 	}
+
+	// print date in each node in the console window
+	friend std::ostream& operator << (std::ostream& os, const List<T>& list) {
+		if (list.IsEmpty()) {
+			os << "Empty list!\n";
+		}
+		else {
+			Node* node = list.mHead;
+			os << "[";
+			while (node != nullptr) {
+				os << node->mData << " ";
+				node = node->mNext;
+			}
+			os << "]\n";
+		}
+		return os;
+	}
 		
 };
