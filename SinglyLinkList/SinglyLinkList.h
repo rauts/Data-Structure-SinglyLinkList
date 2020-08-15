@@ -114,10 +114,36 @@ public:
 		// create a new node with a value
 		Node* newNode = new Node{ value };
 		// connect neighbour of the new node to the neighbour of the given node
-		newNode->mNext = node->mNext;
-		// make newNode the neighbour of the given node 
-		node->mNext = newNode;
-		++mNodeCount;
+		if (newNode) {
+			newNode->mNext = node->mNext;
+			// make newNode the neighbour of the given node 
+			node->mNext = newNode;	
+			++mNodeCount;
+		}
+		else {
+			cout << "Memory Allocation for Node is Failed\n";
+		}
+		
+		
+	}
+
+	void RemoveAfter(Node* node) {
+		assert(node != nullptr);
+		// create a temporary node and make it neighbour of the given node or a node being deleted
+		if (node->mNext) {
+			Node* tempNode = node->mNext;
+			// change the neighbour of the given node using the tempory node 
+			node->mNext = tempNode->mNext;		
+			// delete the temporary node pointing to the previous neighbour of the given node
+			delete tempNode;
+			// decrease the node count
+			--mNodeCount;
+		}
+		else {
+			cout << "Last Node: No Node to Remove\n";
+		}
+		
+		
 	}
 		
 };
