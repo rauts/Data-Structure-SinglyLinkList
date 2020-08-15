@@ -3,3 +3,4 @@ SinglyLinkList/*.sln
 SinglyLinkList/*.vcxproj
 SinglyLinkList/*.filters
 SinglyLinkList/*.user
+SinglyLinkList/Debug
