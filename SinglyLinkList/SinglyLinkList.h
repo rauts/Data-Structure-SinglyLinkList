@@ -38,6 +38,17 @@ public:
 	bool IsEmpty() const { return mNodeCount == 0; }
 	int CountNode() const { return mNodeCount; }
 
+	// insert head
+	void InsertHead(const T& data) {
+		// create a node with a value
+		Node* node = new Node{ data };
+		// change the head node		
+		node->mNext = mHead; // mHead is nullptr initially
+		mHead = node;
+		// increment node count
+		++mNodeCount;
+	}
+
 	void Clear() {}
 		
 };
